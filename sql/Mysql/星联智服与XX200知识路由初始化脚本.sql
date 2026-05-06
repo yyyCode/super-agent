@@ -23,8 +23,8 @@ START TRANSACTION;
    0. 请先替换这里的两个文档 ID
    ========================================================= */
 
-SET @doc_customer_service_id = 0; -- TODO: 替换为“星联智服全渠道客服平台上线与运营管理手册.md”的 document_id
-SET @doc_xx200_id = 0;           -- TODO: 替换为“XX-200智能网关产品手册.pdf”的 document_id
+SET @doc_customer_service_id = 2110176840512446598; -- TODO: 替换为“星联智服全渠道客服平台上线与运营管理手册.md”的 document_id
+SET @doc_xx200_id = 2110176840512446482;           -- TODO: 替换为“XX-200智能网关产品手册.pdf”的 document_id
 
 /*
   如果你不确定文档 ID，可以先执行下面的查询，再把查出来的 id 填到上面变量里：

@@ -26,12 +26,8 @@ const isFullscreenLayout = computed(() => route.meta?.layout === 'fullscreen')
 
 <style scoped>
 .app-shell {
-  height: 100vh;
+  min-height: 100vh;
   padding: 16px 24px 24px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-  overflow: hidden;
 }
 
 .app-header {
@@ -74,16 +70,6 @@ const isFullscreenLayout = computed(() => route.meta?.layout === 'fullscreen')
 .app-main {
   max-width: 1440px;
   margin: 0 auto;
-  flex: 1;
-  min-height: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
-.app-main :deep(> *) {
-  flex: 1;
-  min-height: 0;
 }
 
 @media (max-width: 960px) {

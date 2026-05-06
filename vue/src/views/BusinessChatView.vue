@@ -807,9 +807,7 @@ onMounted(async () => {
   display: grid;
   grid-template-columns: 320px minmax(0, 1fr);
   gap: 18px;
-  height: 100%;
-  min-height: 0;
-  overflow: hidden;
+  min-height: calc(100vh - 220px);
 }
 
 .sidebar,
@@ -825,8 +823,7 @@ onMounted(async () => {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  height: 100%;
-  min-height: 0;
+  min-height: 760px;
 }
 
 .sidebar-header,
@@ -954,8 +951,7 @@ onMounted(async () => {
 
 .chat-panel {
   min-width: 0;
-  height: 100%;
-  min-height: 0;
+  min-height: 760px;
   padding: 22px;
   display: flex;
   flex-direction: column;

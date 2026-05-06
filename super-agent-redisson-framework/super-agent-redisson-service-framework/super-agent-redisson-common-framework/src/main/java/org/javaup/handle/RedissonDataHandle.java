@@ -28,6 +28,22 @@ public class RedissonDataHandle {
         redissonClient.getBucket(key).set(value,getDuration(timeToLive,timeUnit));
     }
 
+    /**
+     * 仅当 key 不存在时才设置（原子语义）。
+     * <p>
+     * 常用于“一次性闸门/幂等标记/简单限流”场景。
+     */
+    public boolean trySetIfAbsent(String key, String value) {
+        return redissonClient.getBucket(key).setIfAbsent(value);
+    }
+
+    /**
+     * 仅当 key 不存在时才设置，并附带过期时间（原子语义）。
+     */
+    public boolean trySetIfAbsent(String key, String value, long timeToLive, TimeUnit timeUnit) {
+        return redissonClient.getBucket(key).setIfAbsent(value, getDuration(timeToLive, timeUnit));
+    }
+
     public Duration getDuration(long timeToLive, TimeUnit timeUnit){
         switch (timeUnit) {
 
